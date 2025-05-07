@@ -40,7 +40,7 @@ async function main(){
         // Connect to the MongoDB cluster
         await client.connect();
         console.log(" connection happened here")
-        const data = await fetchTrainDetails(client);
+        const data = await fetchTravelDetails(client);
         return data;
     } catch (e) {
         console.log("Something went wrong while connecting to the database");
@@ -53,7 +53,7 @@ async function main(){
 
 main();
 
-async function fetchTrainDetails(client) {
+async function fetchTravelDetails(client) {
     try {
       const cursor = client.db("travel").collection("places").find({});
       const results = await cursor.toArray();
@@ -70,12 +70,12 @@ async function fetchTrainDetails(client) {
 const server = http.createServer(async (req, res) => {
   if (req.url==='/api') {
     const content = main();
-    content.then((trainDetails) => {
+    content.then((travelDetails) => {
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Access-Control-Allow-Methods', 'GET');
       res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
       res.writeHead(200, { 'content-type': 'application/json' });
-      res.end(trainDetails);
+      res.end(travelDetails);
 
     });
   }
