@@ -1,189 +1,180 @@
 body {
-    background-color: #ffffff;
-    margin-right: 50px;
-    margin-top: 70px;
-}
-header {
-    width: 100%;
-    background-color: #165fa8;
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.menu-button {
-    display: none;
-    background-color: #165fa8;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-}
-.container {
-    width: 1149px;
-    max-width: 1149px;
-    padding: 0;
-    margin-left: auto; 
-    margin-right: auto;
+  background-color: #ffffff;
 }
 nav.navigation {
-    background-color: #165fa8;
-    height: 50px;
-    width: 1120px;
-    margin-left: 12px;
+  background-color: #165fa8;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: left;
+  height: 50px;
+  padding-bottom: 30px;
+}
+.menu-button {
+  display: none;
+  background-color: #165fa8;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-links li {
+  padding: 10px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+}
+.nav-links a:hover {
+  background-color: #092a4d;
 }
 nav ul {
-    text-align: center;
-    height: 50px;
+  text-align: center;
+  height: 50px;
 }
 nav ul li {
-    display: inline-block;
-    margin-right: 70px;
+  display: inline-block;
+  margin-right: 90px;
+  margin-left: 20px;
 }
 nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 20px;
-    font-style: oblique;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    line-height: 50px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-style: oblique;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  line-height: 40px;
 }
-.row {
-    width: 550px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-    margin-top: 30px;
-    margin-left: 14px;
+.container {
+  display: grid;
+  gap: 15px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
 }
-.left-column {
-    display: inline-block;
-    text-align: center;
-    background-color: #48a3c2;
-    color: #ffffff;
-    width: 550px;
-    height: 240px;
+.profile-skills-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
-.right-column {
-    display: inline-block;
-    text-align: center;
-    background-color: #48a3c2;
-    color: #ffffff;
-    height: 637px;
-}
-.main-heading {
-    font-size: 15px;
-    text-align: center;
-    padding-right: 30px;
-}
-.paragraph {
-    text-align: center;
-    font-size: 15px;
-}
-.heading {
-    text-align: center;
-    font-size: 20px;
+.profile-about {
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  align-items: center;
+  background-color: #48a3c2;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  gap: 20px;
 }
 .photo-container {
-    font-size: 10px;
-    width: 180px;
-    height: 10px;
-    color: #ffffff;
-    text-align: center;
-    margin-left: 40px;
-    margin-top: 30px;
-}
-.about-container {
-    display: inline-block;
-    color: #ffffff;
-    text-align: center;
-    width: 180px;
-    margin-left: 180px;
+  text-align: center;
+  margin-right: 15px;
 }
 .passport-photo {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin-top: 20px;
-    border-radius: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
 }
-.skills-container {
-    height: 328px;
-    width: 500px;
-    color: #ffffff;
-    background-color: #48a3c2;
-    text-align: center;
-    padding:25px;
-    margin-bottom: 12px;
-    display: inline-block;
-    margin-top: 20px;
-    margin-right: 20px;
+.skills {
+  background-color: #48a3c2;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  margin: 10px;
+  margin-top: 30px;
+}
+.projects {
+  background-color: #48a3c2;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px ;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.education-certifications,
+.experience-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 .project-container {
-    width: 220px;
-    display: inline-block;
-    color: #ffffff;
-    height: 240px;
-    text-align: center;
-    padding-top: 37px;
-    padding-bottom: 8px;    
+  width: 220px;
+  display: inline-block;
+  color: #ffffff;
+  height: 240px;
+  text-align: center;
+  padding-top: 37px;
+  padding-bottom: 8px;    
 }
 .text-side{
-    display: inline-block;
-    width: 450px;
-    height:40px
-  }
+  display: inline-block;
+  width: 450px;
+  height:40px
+}
 #education,
 #experience,
 #certifications,
 #contact {
-    text-align: center;
-    width: 550px;
-    display: inline-block;
-    background-color: #48a3c2;
-    color: #ffffff;
-    vertical-align: top;
-    height: 300px;
-    margin: 10px;
+  text-align: center;
+  width: 550px;
+  display: inline-block;
+  background-color: #48a3c2;
+  color: #ffffff;
+  vertical-align: top;
+  height: 300px;
+  margin: 10px;
 }
 .education-item img,
 .experience-item img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 .certification-item img {
-    background-color: #48a3c2;
-    color: #ffffff;
-    margin: 0;
-}
-.certification-item img {
-    width: 50px;
-    height: 50px;
-    margin: 0;
+  width: 50px;
+  height: 50px;
 }
 #contact ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 #contact ul li {
-    display: inline-block;
+  display: inline-block;
 }
 #contact ul li img {
-    width: 60px;
-    height: 60px;
-    vertical-align: middle;
-    margin: 30px;
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  margin-right: 38px;
+  padding:10px;
 }
 footer {
-    width: 100%;
-    background-color: #165fa8;
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px;
+  width: 100%;
+  background-color: #165fa8;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
 }
+#profile:target,
 #about:target,
 #skills:target,
 #education:target,
@@ -191,65 +182,57 @@ footer {
 #projects:target,
 #certifications:target,
 #contact:target {
-    background-color: #6a6d70;
-}
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    text-align: left;
+  background-color: #6a6d70;
 }
 
 
-@media (max-width: 500px) {
-    .profile-skills-projects,
-    .education-certifications,
-    .experience-contact {
-        grid-template-columns: 1fr;
-    }
-    .menu-button {
-        display: block;
-        background-color: #165fa8;
-        color: white;
-        font-size: 20px;
-        padding: 10px;
-        text-align: left;
-        width: 100px;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-    }
-    .nav-links {
-        display: none;
-        grid-template-columns: 1fr;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 400px;
-        background-color: #165fa8;
-        padding: 10px 0;
-        text-align: center;
-        height: auto;
-        margin-left: 8px;
-    }
-    .nav-links li {
-        padding: 15px;
-        display: block;
-        width: 320px;
-    }
-    .nav-links a {
-        display: block;
-        font-size: 18px;
-        color: white;
-        text-decoration: none;
-        padding: 10px;
-        background-color: #0d3c63;
-    }
-    #menu-toggle:target {
-        display: grid;
-        height: auto;
-        padding: 10px 0;
-    }
-    }
+@media (max-width: 768px) {
+.profile-skills-projects,
+.education-certifications,
+.experience-contact {
+  grid-template-columns: 1fr;
+}
+.menu-button {
+  display: block;
+  background-color: #165fa8;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-align: left;
+  width: 100px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-links {
+  display: none;
+  grid-template-columns: 1fr;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 400px;
+  background-color: #165fa8;
+  padding: 10px 0;
+  text-align: center;
+  height: auto;
+  margin-left: 8px;
+}
+.nav-links li {
+  padding: 15px;
+  display: block;
+  width: 320px;
+}
+.nav-links a {
+  display: block;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #0d3c63;
+}
+#menu-toggle:target {
+  display: grid;
+  height: auto;
+  padding: 10px 0;
+}
+}
